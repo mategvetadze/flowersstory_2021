@@ -1,0 +1,135 @@
+.signup-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
+  }
+  
+  @media (min-width: 1024px) {
+    .signup-page {
+      flex-direction: row;
+    }
+  }
+  
+
+  .signup-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: #ffffff;
+  }
+  
+
+  .auth-pattern-container {
+    flex: 1;
+    background-color: #f3f4f6;
+    padding: 2rem;
+    display: none;
+  }
+  
+  @media (min-width: 1024px) {
+    .auth-pattern-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  
+  /* --- Form --- */
+  .signup-form-wrapper {
+    width: 100%;
+    max-width: 28rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .input-wrapper {
+    position: relative;
+  }
+  
+  .input-icon {
+    position: absolute;
+    top: 50%;
+    left: 0.75rem;
+    transform: translateY(-50%);
+    color: rgba(100, 116, 139, 0.5);
+    pointer-events: none;
+  }
+  
+  .eye-icon {
+    position: absolute;
+    top: 50%;
+    right: 0.75rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: rgba(100, 116, 139, 0.6);
+  }
+  
+  .input {
+    width: 100%;
+    padding: 0.5rem 2.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  
+  .input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 1px #3b82f6;
+    outline: none;
+  }
+  .password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 0.75rem;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .submit-btn {
+    margin-top: 20px;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #3b82f6;
+    color: white;
+    font-weight: 500;
+    border: none;
+    border-radius: 0.375rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  .text-muted {
+    text-align: center;
+    color: rgba(71, 85, 105, 0.6);
+  }
+  
+  .link-primary {
+    color: #3b82f6;
+    text-decoration: none;
+  }
+  
+  .link-primary:hover {
+    text-decoration: underline;
+  }
+  
+
+  .signup-header{
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  .form-control{
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }

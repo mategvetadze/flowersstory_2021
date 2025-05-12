@@ -1,0 +1,130 @@
+.h1h{
+    font-family: "Dancing Script";
+    margin-top: 90px;
+}
+
+.h1h .sp1{
+    font-family: "Dancing Script";
+    background: linear-gradient(to right, transparent, pink);
+    font-size: 50px;
+    color: #ff69b4;
+}
+
+.h1h .sp2{
+    font-family: "Dancing Script";
+    background: linear-gradient(to left, transparent, pink);
+    font-size: 50px;
+    color: #ff69b4;
+}
+
+.btncontainer{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-direction: row;
+    margin-top: 120px;
+    margin-left: 90px;
+}
+
+.b1{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 190px;
+    height: 55px;
+    background-color: #c90064;
+    color: white;
+    border: none;
+    transition: 0.3s linear;
+    font-size: 15px;
+}
+
+.b2{
+    background-color: rgb(204, 42, 233);
+    border-radius: 5px;
+    z-index: 2;
+}
+
+.b1:hover{
+    box-shadow: 5px 5px 25px #ff69b4;
+}
+
+.img1{
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    margin-right: 30px;
+    top: 10%;
+    left: 50%;
+    animation: 8s linear infinite changeColor;
+    z-index: 2;
+}
+
+@keyframes changeColor{
+    0%{
+        filter: drop-shadow(0 10px 50px #ff69b4);
+    }
+    25%{
+        filter: drop-shadow(0 10px 50px #d6237c);
+    }
+    50%{
+        filter: drop-shadow(0 10px 50px #d41d1d);
+    }
+    75%{
+        filter: drop-shadow(0 10px 50px #e4e715);
+    }
+    100%{
+        filter: drop-shadow(0 10px 50px #ff69b4);
+    }
+}
+
+.dd{
+    position: absolute;
+}
+
+.d1{
+    left: 80%;
+    top: 50%;
+    width: 100px;
+    height: 340px;
+    background-color: #ffa35d;
+    z-index: 1;
+}
+
+.d2{
+    left: 55%;
+    top: 10%;
+    width: 100px;
+    height: 380px;
+    background-color: #c8ff69;
+    z-index: 1;
+}
+
+.d3{
+    left: 67%;
+    top: 10%;
+    width: 100px;
+    height: 665px;
+    background-color: #ff69b4;
+    z-index: 1;
+}
+
+.p1{
+    margin-top: 40px;
+   
+}
+
+.textsCont{
+    margin-left: 50px;
+}
+
+
+.card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 1rem 2rem;
+}

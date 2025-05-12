@@ -1,0 +1,61 @@
+.Container{
+    width: 100vw;
+    height: 50px;
+    background-color: transparent;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.Home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    cursor: pointer;
+}
+
+.Link{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-direction: row;
+    width: 100vw;
+    padding: 20px;
+}
+
+.logOut{
+    cursor: pointer;
+}
+
+span{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.flower2{
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.Link2{
+    gap: 20px;
+}
