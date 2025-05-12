@@ -7,6 +7,7 @@ import LogIn from './components/LogIn'
 import SignUp from './components/SignUp'
 import Products from './components/Products'
 import {Toaster} from "react-hot-toast"
+import AdminPage from './AdminPanel/AdminPage'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       <NavBar />
       <Toaster />
       <Routes>
+        <Route path='adminPage' element={<AdminPage />} />
         <Route path={"/"} element={<Home />} />   
         <Route path='/aboutus' element={<AboutUs />} />     
         <Route path='/products' element={<Products />} />

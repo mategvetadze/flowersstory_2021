@@ -1,7 +1,7 @@
 .signup-page {
     display: flex;
     flex-direction: column;
-    min-height: 90vh;
+    min-height: 92vh;
   }
   
   @media (min-width: 1024px) {
@@ -35,8 +35,6 @@
       justify-content: center;
     }
   }
-  
-  /* --- Form --- */
   .signup-form-wrapper {
     width: 100%;
     max-width: 28rem;
