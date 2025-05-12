@@ -6,7 +6,7 @@ import AboutUs from './components/AboutUs'
 import LogIn from './components/LogIn'
 import SignUp from './components/SignUp'
 import Products from './components/Products'
-
+import {Toaster} from "react-hot-toast"
 
 function App() {
 
@@ -14,6 +14,7 @@ function App() {
   return (
     <>
       <NavBar />
+      <Toaster />
       <Routes>
         <Route path={"/"} element={<Home />} />   
         <Route path='/aboutus' element={<AboutUs />} />     

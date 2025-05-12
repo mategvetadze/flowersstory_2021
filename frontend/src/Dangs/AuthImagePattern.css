@@ -29,7 +29,7 @@
   .pattern-box {
     aspect-ratio: 1 / 1;
     border-radius: 1rem;
-    background-color: rgba(59, 130, 246, 0.1); /* primary/10 fallback */
+    background-color: rgba(165, 59, 246, 0.767); /* primary/10 fallback */
     transition: all 0.5s ease;
   }
   

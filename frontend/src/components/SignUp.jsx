@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { MessageSquare, User, Mail, Eye, EyeOff, Lock } from 'lucide-react'
 import './SignUp.css'
 import AuthImagePattern from '../Dangs/AuthImagePattern'
+import toast from "react-hot-toast"
 
 const SignUp = () => {
 
@@ -10,6 +11,45 @@ const SignUp = () => {
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
     };
+
+    const [person, setPerson] = useState(
+      {
+        fullName: "",
+        email: "",
+        password: "",
+      }
+    )
+
+    const handleErrors = () => {
+      if(!person.fullName.trim()){
+        return toast.error("Full name is required")
+      }
+      if(!/^[\p{L}]+(?:[ '-][\p{L}]+)*$/u.test(person.fullName)){
+        return toast.error("Invalid full name format")
+      }
+      if(!person.email.trim()){
+        return toast.error("Email is required")
+      }
+      if(!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(person.email)){
+        return toast.error("Email is not valid")
+      }
+      if(!person.password.trim()){
+        return toast.error("Password is required")
+      }
+      if(person.password.length < 8){
+        return toast.error("Password must be at least 8 characters long")
+      }
+  
+      return true
+    }
+
+    const onSum = (e) => {
+      e.preventDefault();
+      const errs = handleErrors();
+      if(errs === true){
+        toast.success("Account Created Succesfully")
+      }
+    }
 
   return (
     <>
@@ -20,7 +60,7 @@ const SignUp = () => {
                 <h1>Create Account</h1>
                 <p>Get started with your free account</p>
         </div>
-      <form className="signup-form">
+      <form className="signup-form" onSubmit={onSum}>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Full Name</span>
@@ -31,7 +71,7 @@ const SignUp = () => {
               type="text"
               className="input"
               placeholder="John Doe"
-              
+              onChange={(e) => setPerson({...person, fullName:e.target.value})}
             />
           </div>
         </div>
@@ -46,7 +86,7 @@ const SignUp = () => {
               type="text"
               className="input"
               placeholder="example@example.com"
-              
+              onChange={(e) => setPerson({...person, email:e.target.value})}
             />
             </div>
         </div>
@@ -61,7 +101,7 @@ const SignUp = () => {
               type={showPassword ? "text" : "password"}
               className="input"
               placeholder="********"
-              
+              onChange={(e) => setPerson({...person, password:e.target.value})}
             />
             {
                 showPassword ? (
@@ -93,7 +133,7 @@ const SignUp = () => {
   </div>
   <AuthImagePattern
     title={"Welcome to Our Flower Shop!"}
-    subtitle={"Your journey begins here."}
+    subtitle={"Just FYI... Flowers are gay"}
    />
 </div>
     </>
