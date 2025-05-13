@@ -97,7 +97,7 @@ input[type="file"] {
     font-family: 'Courier New', Courier, monospace;
     background-color: transparent;
     border: none;
-    border-bottom: 1px solid black;
+    border: 1px solid black;
     cursor: pointer;
     margin-top: 3rem;
     transition: 0.1s linear;

@@ -57,17 +57,22 @@ const AdminPage = () => {
             <input
                 type='text'
                 placeholder='Name of the flower'
-                onChange={(e) => setFlower({...flower, name:e.target.value})}   />
-
-            <input
-                type='text'
-                placeholder='Small description of the flower' 
-                onChange={(e) => setFlower({...flower, desc:e.target.value})}  />
+                onChange={(e) => setFlower({...flower, name:e.target.value})}
+                defaultValue={""}   />
 
             <input 
                 type='number' 
                 placeholder='price ' 
-                onChange={(e) => setFlower({...flower, price:e.target.value})} />
+                onChange={(e) => setFlower({...flower, price:e.target.value})}
+                defaultValue={""} />
+
+            <input
+                type='text'
+                placeholder='Small description of the flower' 
+                onChange={(e) => setFlower({...flower, desc:e.target.value})} 
+                defaultValue={""} />
+
+            
 
             <label htmlFor="file-upload" className="custom-file-label">
                 Choose File
@@ -75,18 +80,20 @@ const AdminPage = () => {
             <input
                 id="file-upload" 
                 type="file" 
-                onChange={handleFileChange} />
+                onChange={handleFileChange}
+                defaultValue={""} />
 
             <input 
                 type='text' 
                 placeholder='url for online flower image' 
-                onChange={(e) => setFlower({...flower, img:e.target.value})} />
+                onChange={(e) => setFlower({...flower, img:e.target.value})}
+                defaultValue={""} />
             <button className='btn'>Create</button>
         </form>
 
         
             <div className='FlowerCard'>
-            <img src={flower.img} />
+            <img src={flower.img} alt='Image Placeholder' />
             <div className='flCont'>
                 <label><span>{flower.name}</span></label>
                 <label><span>{flower.price} ₾</span></label>
