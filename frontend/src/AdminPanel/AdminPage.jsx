@@ -1,15 +1,27 @@
 import React, { useState } from 'react'
 import "./AdminPage.css"
 import toast from "react-hot-toast"
+import { IoArrowForwardSharp } from "react-icons/io5";
 
 const AdminPage = () => {
 
     const [flower, setFlower] = useState({
-        name: "Name",
+        name: "Roses",
         price: "0",
         img: "https://i5.walmartimages.com/asr/9cbb58cb-3ee0-4933-a727-821f33366a7e_1.c82fd30fc23cc09eb3700de9372fbc40.png",
-        desc: "Small Description"
+        desc: "Red Roses with green leaves :)"
     })
+
+    const [color, setColor] = useState("#f8292924");
+    const handlePink = () => {
+        setColor("#f8292924")
+    }
+    const handleRed = () => [
+        setColor("#ff0000a5")
+    ]
+    const handlePurple = () => {
+        setColor("#cf2dcf")
+    }
 
     function handleErrors(){
         if(!flower.name){
@@ -92,14 +104,33 @@ const AdminPage = () => {
         </form>
 
         
-            <div className='FlowerCard'>
+        <div className='flOuterCont'>
+            <div className='FlowerCard' style={{
+                backgroundColor : color
+            }}>
             <img src={flower.img} alt='Image Placeholder' />
             <div className='flCont'>
                 <label><span>{flower.name}</span></label>
-                <label><span>{flower.price} ₾</span></label>
+                <label><span>{flower.price === "" ? "" : flower.price + " ₾"}</span></label>
                 <label><span>{flower.desc}</span></label>
             </div>
-            
+         </div>  
+         <div className='btnCont'>
+            <button onClick={handlePink} style={{
+                backgroundColor : "#f8292924"
+            }}>Pink</button>
+            <button onClick={handleRed} style={{
+                backgroundColor : "#ff0000a5"
+            }}>Red</button>
+            <button onClick={handlePurple} style={{
+                backgroundColor : "#cf2dcf"
+            }}>Purple</button>
+
+            <div className='manual'>
+                <span>Or Choose Color </span><IoArrowForwardSharp />
+                <input type='color' defaultValue={color} onChange={(e) => setColor(e.target.value)} className='inpCol' />
+            </div>
+        </div>
         </div>
     </div>
   )
