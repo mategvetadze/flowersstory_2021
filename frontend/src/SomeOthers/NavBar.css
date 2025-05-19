@@ -39,6 +39,10 @@
 
 .logOut{
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }
 
 span{
@@ -48,4 +52,18 @@ span{
 
 .Link2{
     gap: 20px;
+}
+
+.ss{
+    width: 100px;
+    height: 30px;
+    background-color: rgb(255, 192, 245);
+    border: none;
+    border-radius: 3px;
+    transition: 0.1s linear;
+}
+
+.ss:hover{
+    box-shadow: -5px 5px 10px rgb(249, 170, 255);
+    cursor: pointer;
 }

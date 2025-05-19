@@ -29,6 +29,12 @@ const NavBar = () => {
                 </Link>
             </div>
             <div className='logOut'>
+                <Link to={"/login"}>
+                    <button className='lg ss'>LogIn</button>
+                </Link>
+                <Link to={'/signup'}>
+                <button className='sg ss'>SignUp</button>
+                </Link>
                 <LogOut className='logOutIcon' />
             </div>
         </header>
