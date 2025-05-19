@@ -62,6 +62,15 @@ const AdminPage = () => {
         }
     }
 
+    const handleColors = () => {
+        if(color == "#000000"){
+            const styles = {
+                color : "white",
+            }
+            return styles
+        }
+    }
+
   return (
     <div className='fullCont'>
         <form className='container' onSubmit={validateForm}>
@@ -105,11 +114,13 @@ const AdminPage = () => {
 
         
         <div className='flOuterCont'>
+        
+            
             <div className='FlowerCard' style={{
                 backgroundColor : color
             }}>
             <img src={flower.img} alt='Image Placeholder' />
-            <div className='flCont'>
+            <div className='flCont' styles={handleColors}>
                 <label><span>{flower.name}</span></label>
                 <label><span>{flower.price === "" ? "" : flower.price + " ₾"}</span></label>
                 <label><span>{flower.desc}</span></label>

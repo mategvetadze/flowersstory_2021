@@ -6,6 +6,7 @@
     justify-content: center;
     background-color: #f3f4f6; /* base-200 fallback */
     padding: 3rem;
+    font-family: 'Courier New', Courier, monospace;
   }
   
   @media (min-width: 1024px) {

@@ -1,5 +1,28 @@
 {
   "dependencies": {
-    "react-router-dom": "^7.6.0"
-  }
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.14.3",
+    "nodemon": "^3.1.10",
+    "react-router-dom": "^7.6.0",
+    "zustand": "^5.0.4"
+  },
+  "name": "mate-react-flower-shop",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev" : "nodemon backend/script.js"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mategvetadze/flowersstory_2021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mategvetadze/flowersstory_2021/issues"
+  },
+  "homepage": "https://github.com/mategvetadze/flowersstory_2021#readme",
+  "description": ""
 }

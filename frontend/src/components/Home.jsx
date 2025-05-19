@@ -5,6 +5,7 @@ import image1 from '../pics/pngtree-flower-bucket-for-decoration-png-image_90348
 import FlowerCard from '../Dangs/FlowerCard'
 import imame2 from '../pics/image.png'
 import imame3 from '../pics/image1.png'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
@@ -18,10 +19,12 @@ const Home = () => {
         </p>
 
         <div className='btncontainer'>
+          <Link to="/products" className='bsb'>
         <button className='b1 b2'>
             <span>View Products</span>
             <MdOutlineArrowOutward />
         </button>
+        </Link>
         </div>
         </div>
         <div className='d1 dd'></div>
